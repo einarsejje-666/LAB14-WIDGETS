@@ -1,4 +1,4 @@
-﻿plugins {
+plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
@@ -35,6 +35,13 @@ android {
     }
 }
 
+// AGP 9 trae Kotlin integrado: kotlinOptions ya no existe y el compilador
+// de Compose lo pone el plugin kotlin.compose (sin composeOptions).
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
+    }
+}
 
 dependencies {
     // For AppWidgets support
