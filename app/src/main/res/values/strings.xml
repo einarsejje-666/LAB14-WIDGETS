@@ -1,3 +1,5 @@
-﻿<resources>
+<resources>
     <string name="app_name">Widgets Lab</string>
+    <string name="cooruta_widget_nombre">CooRuta · Próximo viaje</string>
+    <string name="cooruta_widget_descripcion">Tu próximo viaje compartido a Tecsup: reserva un asiento sin abrir la app.</string>
 </resources>
