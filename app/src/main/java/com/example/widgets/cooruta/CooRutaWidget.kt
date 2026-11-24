@@ -146,7 +146,7 @@ class CooRutaWidget : GlanceAppWidget() {
             )
             Text("${viaje.origen} → ${viaje.destino}", maxLines = 1, style = estilo(16, texto, negrita = true))
             Text(
-                "${viaje.conductor} · ${ViajesRepositorio.asientosLibres(viaje, reservados)} asientos libres · ${viaje.precio}",
+                "${viaje.conductor} · ${ViajesRepositorio.textoAsientos(viaje, reservados)} · ${viaje.precio}",
                 maxLines = 1, style = estilo(12, texto)
             )
         }
@@ -166,7 +166,7 @@ class CooRutaWidget : GlanceAppWidget() {
                 Text(v.hora, style = estilo(12, GlanceTheme.colors.primary, negrita = true))
                 Spacer(GlanceModifier.width(8.dp))
                 Text(
-                    "${v.origen} → ${v.destino} · ${ViajesRepositorio.asientosLibres(v, reservados)} libres",
+                    "${v.origen} → ${v.destino} · ${ViajesRepositorio.textoAsientos(v, reservados, corto = true)}",
                     maxLines = 1, style = estilo(12, GlanceTheme.colors.onSurface)
                 )
             }

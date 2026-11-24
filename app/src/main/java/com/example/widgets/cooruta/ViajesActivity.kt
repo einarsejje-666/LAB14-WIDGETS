@@ -70,7 +70,7 @@ fun TarjetaViaje(viaje: Viaje, reservados: Set<String>, onClick: () -> Unit) {
                 Text(viaje.hora, style = MaterialTheme.typography.labelLarge)
                 Text("${viaje.origen} → ${viaje.destino}", fontWeight = FontWeight.Bold)
                 Text(
-                    "${viaje.conductor} · ${ViajesRepositorio.asientosLibres(viaje, reservados)} asientos · ${viaje.precio}",
+                    "${viaje.conductor} · ${ViajesRepositorio.textoAsientos(viaje, reservados)} · ${viaje.precio}",
                     style = MaterialTheme.typography.bodySmall
                 )
             }

@@ -62,4 +62,14 @@ object ViajesRepositorio {
 
     fun asientosLibres(viaje: Viaje, reservados: Set<String>): Int =
         viaje.asientos - if (viaje.id in reservados) 1 else 0
+
+    /** "1 asiento libre" / "3 asientos libres" */
+    fun textoAsientos(viaje: Viaje, reservados: Set<String>, corto: Boolean = false): String {
+        val n = asientosLibres(viaje, reservados)
+        return when {
+            corto -> if (n == 1) "1 libre" else "$n libres"
+            n == 1 -> "1 asiento libre"
+            else -> "$n asientos libres"
+        }
+    }
 }
