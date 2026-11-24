@@ -14,8 +14,10 @@ import androidx.glance.background
 import androidx.glance.layout.Alignment
 import androidx.glance.layout.Column
 import androidx.glance.layout.Row
+import androidx.glance.layout.Spacer
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.padding
+import androidx.glance.layout.width
 import androidx.glance.text.Text
 
 class SimpleWidgetContent : GlanceAppWidget() {
@@ -41,6 +43,21 @@ class SimpleWidgetContent : GlanceAppWidget() {
                 Button(
                     text = "Página Principal",
                     onClick = actionStartActivity<MainActivity>()
+                )
+            }
+            // Botones que abren la app directamente en otras vistas
+            Row(
+                modifier = GlanceModifier.padding(top = 8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Button(
+                    text = "Mis notas",
+                    onClick = actionStartActivity<NotasActivity>()
+                )
+                Spacer(GlanceModifier.width(8.dp))
+                Button(
+                    text = "Mi perfil",
+                    onClick = actionStartActivity<PerfilActivity>()
                 )
             }
         }
