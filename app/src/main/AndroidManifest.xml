@@ -28,6 +28,12 @@
         <activity
             android:name=".PerfilActivity"
             android:exported="false" />
+        <activity
+            android:name=".cooruta.ViajesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cooruta.DetalleViajeActivity"
+            android:exported="false" />
 
         <receiver
             android:name=".SimpleWidget"
