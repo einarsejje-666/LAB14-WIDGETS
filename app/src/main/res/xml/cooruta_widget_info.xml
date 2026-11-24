@@ -13,4 +13,5 @@
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="0"
     android:initialLayout="@layout/glance_default_loading_layout"
+    android:previewImage="@drawable/cooruta_widget_preview"
     android:widgetCategory="home_screen" />
